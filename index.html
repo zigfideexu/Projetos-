@@ -1,1 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tempest Buxx • Admin</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Plus Jakarta Sans",sans-serif;
+}
+
+body{
+background:#050814;
+color:white;
+overflow:hidden;
+}
+
+.bg{
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%,rgba(77,163,255,.15),transparent 35%),
+radial-gradient(circle at 80% 30%,rgba(77,163,255,.08),transparent 35%),
+radial-gradient(circle at 50% 80%,rgba(77,163,255,.12),transparent 35%),
+#050814;
+}
+
+.sidebar{
+position:fixed;
+left:20px;
+top:20px;
+bottom:20px;
+width:260px;
+background:rgba(255,255,255,.04);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:24px;
+padding:25px;
+}
+
+.logo{
+font-size:26px;
+font-weight:800;
+color:#7fb2ff;
+margin-bottom:35px;
+}
+
+.menu{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.menu div{
+padding:14px;
+border-radius:14px;
+background:rgba(255,255,255,.03);
+cursor:pointer;
+transition:.25s;
+}
+
+.menu div:hover{
+background:rgba(127,178,255,.15);
+transform:translateX(4px);
+}
+
+.main{
+margin-left:300px;
+padding:30px;
+height:100vh;
+overflow:auto;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.title{
+font-size:34px;
+font-weight:800;
+}
+
+.search{
+width:300px;
+padding:14px;
+border:none;
+outline:none;
+border-radius:14px;
+background:rgba(255,255,255,.05);
+color:white;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+margin-bottom:25px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+padding:25px;
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 0 30px rgba(77,163,255,.15);
+}
+
+.number{
+font-size:34px;
+font-weight:800;
+color:#7fb2ff;
+}
+
+.label{
+opacity:.8;
+margin-top:6px;
+}
+
+.products-title{
+font-size:22px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+gap:18px;
+}
+
+.product{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+overflow:hidden;
+transition:.25s;
+}
+
+.product:hover{
+transform:translateY(-6px);
+box-shadow:0 0 35px rgba(77,163,255,.2);
+}
+
+.thumb{
+height:140px;
+background:linear-gradient(135deg,#0b1d45,#3d84ff);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:26px;
+font-weight:800;
+}
+
+.info{
+padding:18px;
+}
+
+.price{
+color:#7fb2ff;
+font-size:22px;
+font-weight:800;
+margin-top:8px;
+}
+
+.btn{
+margin-top:14px;
+width:100%;
+padding:12px;
+border:none;
+border-radius:12px;
+background:linear-gradient(90deg,#2f7bff,#4da3ff);
+color:white;
+font-weight:700;
+cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="sidebar">
+
+<div class="logo">
+TEMPEST
+</div>
+
+<div class="menu">
+<div>📊 Dashboard</div>
+<div>📦 Produtos</div>
+<div>💰 Vendas</div>
+<div>👥 Clientes</div>
+<div>⚙️ Configurações</div>
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="header">
+
+<div class="title">
+Painel Tempest Buxx
+</div>
+
+<input class="search" placeholder="Pesquisar Akari...">
+
+</div>
+
+<div class="stats">
+
+<div class="card">
+<div class="number">124</div>
+<div class="label">Produtos</div>
+</div>
+
+<div class="card">
+<div class="number">57</div>
+<div class="label">Vendas Hoje</div>
+</div>
+
+<div class="card">
+<div class="number">R$ 3.491</div>
+<div class="label">Faturamento</div>
+</div>
+
+</div>
+
+<div class="products-title">
+Produtos em Destaque
+</div>
+
+<div class="products">
+
+<div class="product">
+<div class="thumb">AKARI</div>
+<div class="info">
+<h3>Conta Akari Endgame</h3>
+<div class="price">R$ 49,90</div>
+<button class="btn">Editar</button>
+</div>
+</div>
+
+<div class="product">
+<div class="thumb">HOSHINO</div>
+<div class="info">
+<h3>Conta Hoshino Max</h3>
+<div class="price">R$ 35,00</div>
+<button class="btn">Editar</button>
+</div>
+</div>
+
+<div class="product">
+<div class="thumb">MIKA</div>
+<div class="info">
+<h3>Conta Mika Starter</h3>
+<div class="price">R$ 19,90</div>
+<button class="btn">Editar</button>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
